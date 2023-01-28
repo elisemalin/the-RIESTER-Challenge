@@ -1,0 +1,702 @@
+* {box-sizing:border-box}
+
+html,body,footer {
+  margin:0;
+  padding:0;
+  letter-spacing: .05em;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* HEADER */
+.mobile-nav {
+  display: none;
+}
+
+.header-nav {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr) .25fr;
+  margin-bottom: -7%;
+}
+
+.header-link {
+  text-decoration: none;
+  color: black;
+}
+
+.header-nav li {
+  text-align: center;
+  z-index: 5;
+  font-family: 'Lato', serif;
+  font-size: 1.6em;
+  font-weight: 300;
+}
+
+#about, #contact, #blog {
+  background-color: rgba(29, 121, 121, 0.77);
+}
+
+#about, #contact, #blog, #home {
+  margin: -20px 1px 7px 1px;
+  padding: 20px 0px 0px 0px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+#home {
+  background-color: rgba(93, 174, 165, 0.77);
+}
+
+#about:hover, #contact:hover, #blog:hover {
+  background-color: rgba(93, 174, 165, 0.77);
+}
+/* END HEADER */
+/* SLIDESHOW */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+/* Slides styling */
+.slide-pic {
+  z-index: 1;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  z-index: 1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  z-index: 7;
+  width: auto;
+  top: 35%;
+  user-select: none;
+  transition: all .4s ease;
+  padding: 5px;
+}
+
+.next {
+  right: 5%;
+}
+
+.prev {
+  left: 5%;
+}
+
+/* On hover, add black transparent bg */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.2);
+  transition: all .4s ease;
+}
+
+/* Rectangles / indicators */
+.rect-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: -16%;
+  z-index: 7;
+  position: relative;
+}
+
+.rect {
+  cursor: pointer;
+  height: 10px;
+  width: 99.8%;
+  background-color: rgba(29, 121, 121, 1);
+  transition: background-color 0.6s ease;
+}
+
+.active, .rect:hover {
+  background-color: rgba(93, 174, 165, 1);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .6s;
+  animation-name: fade;
+  animation-duration: .6s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* END SLIDESHOW */
+/* BLACK MOTIVATION/EMAIL SECTION */
+
+.motiv-grid {
+  background-color: black;
+  z-index: 6;
+  position: relative;
+  padding: 2% 3%;
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr minmax(300px, 1fr);
+  font-family: 'Lato', serif;
+  font-weight: 300;
+}
+
+/* MOTIVATION */
+.motivation {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.motivation h2 {
+  margin-bottom: -1.5%;
+}
+/* END MOTIVATION */
+/* EMAIL */
+.sign-up {
+  padding-left: 10%;
+
+  border-left: solid 1px #333333;
+}
+
+.sign-up {
+
+}
+
+#riestermail {
+  color: #dea20b;
+  font-size: 2em;
+}
+
+#email {
+  background-color: black;
+  color: #dea20b;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15em;
+  border: solid 1px #dea20b;
+  padding: 3px 0 1px 5%;
+  margin-right: -10%;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1206px) {
+  .motivation h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .motivation h2 {
+    font-size: 1.5em;
+  }
+
+  .sign-up {
+    border-left: solid 1px #333333;
+    margin-top: -2%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  #submit {
+    width: 100%;
+    margin-top: 3%!important;
+    margin-left: 0%!important;
+    padding: 0;
+    margin: auto;
+  }
+
+  #riestermail {
+    font-size: 1.8em;
+  }
+}
+
+#submit {
+  color: black;
+  background-color: #dea20b;
+  border: none;
+  margin-left: 10%;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 7px 25px 3px 25px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+#submit:hover {
+  background-color: #e1ba57;
+  transition: all .4s ease;
+}
+
+.sign-up h2 {
+  margin-bottom: -5%
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #dea20b;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #dea20b;
+}
+
+::placeholder {
+  color: #dea20b;
+}
+
+input:focus {
+  outline: none;
+}
+/* END EMAIL */
+/* END BLACK MOTIVATION/EMAIL SECTION */
+/* SPICY CPG */
+.spicy-grid {
+  background-color: #212121;
+  padding: 0 6%;
+  z-index: 7;
+  position: relative;
+  color: white;
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#fiesta {
+  -webkit-box-shadow: 0px 0px 300px -90px #fff;
+  -moz-box-shadow: 0px 0px 300px -90px #fff;
+  box-shadow: 0px 0px 300px -90px #fff;
+}
+
+#hot-health {
+  margin-bottom: -1.5%;
+  margin-top: 0;
+}
+
+#best-thing {
+  margin-bottom: 1.5%;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+.bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3% 0% 5% 0%;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+.cpg-container {
+  padding: 4% 0 0 5%;
+  margin-top: -5%;
+}
+
+.cpg-container ul {
+  margin: 0;
+  list-style-type: none;
+  font-weight: 400;
+  padding: 0;
+}
+
+ul.dashed > li {
+  text-indent: -5px;
+}
+
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: 5px;
+}
+
+#rock-but {
+  text-decoration: none;
+  color: black;
+  background-color: #5daea5;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.35em;
+  padding: 6px 20px 3px 20px;
+  transition: all .4s ease;
+  margin-top: 1%;
+  border: none;
+  cursor: pointer;
+}
+
+#rock-but:hover {
+  background-color: #325e59;
+  transition: all .4s ease;
+}
+
+#right-list {
+  margin-left: 2%;
+}
+/* END SPICY CPG */
+/* FOOTER */
+footer {
+  background-color: black;
+  font-family: 'Lato', serif;
+  font-weight: 300;
+  color: white;
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 1280px) auto;
+  padding: .5% 0 2% 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  transition: all .4s ease;
+}
+
+footer li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.foot-grid {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-auto-rows: 1fr;
+  margin-left: 6%;
+}
+
+#riester-white, #connect {
+  margin-top: 11%;
+  cursor: pointer;
+}
+
+
+/* LOCATIONS */
+.address:hover, .phone:hover, .footer-link:hover {
+  color: #5daea5;
+  transition: all .4s ease;
+}
+
+#locations, #connect {
+  font-size: 1.6em;
+}
+
+#locations {
+  margin-top: 4%;
+}
+
+.loc-title {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.loc-group ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: -40px;
+  margin-top: -25px;
+}
+
+.foot-nav ul {
+  margin-left: -35px;
+}
+
+#phoenix div {
+  margin: 0;
+}
+/* END LOCATIONS */
+/* CONNECT */
+#connect {
+  padding-left: 8%;
+  cursor: text;
+}
+
+.con-group {
+  margin-left: 20%;
+}
+
+.social {
+  color: black;
+}
+
+.icon-background {
+  color: #5daea5;
+}
+
+.icon-background:hover {
+  color: #325e59;
+}
+/* END CONNECT */
+/* END FOOTER */
+
+/* RESPONSIVE LAYOUTS */
+/* MAIN GRID */
+main {
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 1280px) auto;
+}
+
+.hero-slider {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.motiv-email {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 1280px) auto;
+  background-color: black;
+  z-index: 6;
+  position: relative;
+}
+
+.motiv-grid {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.spicy-cpg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: #212121;
+  display: grid;
+  grid-template-columns: auto minmax(min-content, 1280px) auto;
+  padding: 74px 0;
+  z-index: 7;
+  position: relative;
+}
+
+.spicy-grid {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* END MAIN GRID */
+/* PHONE */
+@media screen and (max-width: 768px) {
+  /* MOBILE HAMBURGER MENU */
+  #desktop-header {
+    display: none;
+  }
+
+  #mobile-header {
+    display: block;
+    z-index: 7;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+
+  .topnav #mobile-links {
+    display: none;
+    font-family: 'Lato', serif;
+    font-size: 1.4em;
+    font-weight: 300;
+  }
+
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 29px 29px 29px 29px;
+    overflow: hidden;
+  }
+
+  .topnav .icon:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  /* END HAMBURGER */
+
+  /* MOBILE NAV BUTTONS */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0);
+    transition: all .4s ease;
+  }
+
+  .prev, .next {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+  }
+
+  .mobi-prev, .mobi-next {
+    width: 40px;
+  }
+
+  .mobi-next {
+    right: 5%;
+  }
+
+  .mobi-prev {
+    left: 5%;
+  }
+
+  .rect {
+    width: 99%;
+  }
+  /* END MOBILE NAV BUTTONS */
+  /* MOBILE SIGN-UP AND MOTIVATION */
+  .sign-up {
+    border-left: none!important;
+    border-top: solid 1px #333333;
+    margin: -2% 0% 10% 0%;
+    padding: 10% 5%;
+  }
+
+  .motiv-grid {
+    position: relative;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+
+  .motivation {
+    margin-bottom: 10%;
+    padding-top: 7%;
+    padding-bottom: 5%;
+  }
+
+  #riestermail {
+    padding-bottom: 1.5%;
+    font-size: 2em;
+  }
+
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .sign-up h2, .sign-up p {
+    text-align: center;
+  }
+  /* END MOBILE SIGN-UP AND MOTIVATION */
+  /* MOBILE SPICY CPGS SECTION */
+  #rock-but{
+    width: 100%;
+  }
+
+  #hot-health {
+    padding-top: 15%;
+  }
+
+  .spicy-grid {
+    grid-template-columns: repeat(auto-fill, 100%);
+    grid-template-row: 1fr 1fr;
+  }
+
+  #fiesta, .cpg-container {
+    margin: auto;
+    padding: 0;
+  }
+
+  .bullets {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #right-list {
+    margin-left: 0;
+  }
+  /* END MOBILE SPICY CPGS SECTION */
+  /* MOBILE FOOTER */
+  footer {
+    margin: auto;
+    padding: 0;
+  }
+
+  .foot-nav {
+    display: none;
+  }
+
+  .foot-grid {
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, 100%);
+    margin: 0;
+  }
+
+  .loc-group {
+    margin: auto;
+    padding-top: 10%;
+  }
+
+  #locations {
+    text-align: center;
+  }
+
+  .loc-group ul {
+    grid-template-columns: repeat(auto-fit, 100%);
+    text-align: center;
+  }
+
+  .con-group {
+    margin: auto;
+    padding: 0 0 20% 0;
+    text-align: center;
+  }
+
+  #connect {
+    padding: 0;
+  }
+  /* END MOBILE FOOTER */
+}
+/* END PHONE */
+/* VARIOUS FIXES FOR TESTED DEVICES */
+@media screen and (max-width: 425px) {
+  #hot-health {
+    font-size: 1.5em;
+  }
+
+  #best-thing {
+    font-size: 1em;
+  }
+
+  .bullets {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mobi-next, .mobi-prev {
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .header-nav {
+    margin-bottom: -10%;
+  }
+}
+/* END FIXES FOR TESTED DEVICES */
+/* RESPONSIVE LAYOUTS */
