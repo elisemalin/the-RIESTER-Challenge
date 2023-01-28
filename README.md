@@ -4,7 +4,7 @@ The RIESTER Challenge was a quick little weekend project I completed between 02/
 
 ## Viewing
 
-Take a look at my version of [The RIESTER Challenge](https://elisemalin.github.io/RIESTER-Challenge/)!
+Take a look at my version of [The RIESTER Challenge](https://elisemalin.github.io/the-RIESTER-Challenge/)!
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
